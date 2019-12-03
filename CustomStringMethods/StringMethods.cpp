@@ -72,7 +72,7 @@ std::string StringMethods::toCamel(std::string str) {
 			}
 		}
 		else {
-			// if not a char, then leave it:
+			// if not a letter, then leave it:
 			retString += str.at(i);
 		}
 	}
@@ -177,6 +177,37 @@ std::string StringMethods::concat(std::string str1, std::string str2) {
 	return retString;
 }
 
+/********** substring **********/
+
+// get string from one index to another:
+std::string StringMethods::substring(std::string str, int start, int end) {
+	std::string retString;
+	// copy all chars from specified start to specified end into retString:
+	for (int i = start; i < end; i++) {
+		retString += str.at(i);
+	}
+	return retString;
+}
+
+/********** trim **********/
+
+// trim whitespace off the front and back of a string:
+std::string StringMethods::trim(std::string str) {
+	std::string retString = str;
+	// if the first char is a space:
+	if (str.at(0) == ' ') {
+		// delete it:
+		retString = substring(str, 1, str.length() - 1);
+		str = retString;
+	}
+	// if the last char is a space:
+	if (str.at(str.length() - 1) == ' ') {
+		// delete it:
+		retString = substring(str, 0, str.length() - 1);
+	}
+	return retString;
+}
+
 /********** contains **********/
 
 // check if one string contains another:
@@ -224,7 +255,7 @@ bool StringMethods::contains(std::string str, char check) {
 
 // check if two strings are equal (have the same sequence of chars):
 bool StringMethods::isEqual(std::string str1, std::string str2) {
-	// if the strings are the same size:
+	// if the strings are the same length:
 	if (str1.length() == str2.length()) {
 		for (int i = 0; i < str1.length(); i++) {
 			// if a character is not the same:
@@ -239,6 +270,7 @@ bool StringMethods::isEqual(std::string str1, std::string str2) {
 			}
 		}
 	}
+	// if the strings have different lengths:
 	return false;
 }
 

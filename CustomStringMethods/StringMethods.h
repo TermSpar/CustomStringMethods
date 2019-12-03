@@ -28,6 +28,8 @@ public:
 	// modifier methods:
 	static std::vector<std::string> split(std::string, char);
 	static std::string concat(std::string, std::string);
+	static std::string substring(std::string, int start, int end);
+	static std::string trim(std::string);
 
 	// boolean methods:
 	static bool contains(std::string str, std::string check);

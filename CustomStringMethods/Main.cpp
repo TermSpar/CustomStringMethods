@@ -31,6 +31,12 @@ int main() {
 	std::cout << str1 << "\n" << str2 << "\n";
 	std::cout << "Combined: " << StringMethods::concat(str1, str2) << "\n\n";
 
+	// testing trim method:
+	std::cout << "TRIM METHOD\n------------\n";
+	std::string trimString = " Trim me down ";
+	std::cout << "Origin String: '" << trimString << "'\n";
+	std::cout << "Trimed String: '" << StringMethods::trim(trimString) << "'\n\n";
+
 	// testing contains method:
 	std::cout << "CONTAINS METHOD\n----------------\n";
 	std::string contString = "What's in this string?";
