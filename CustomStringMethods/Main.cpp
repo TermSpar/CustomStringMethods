@@ -36,7 +36,22 @@ int main() {
 	std::string contString = "What's in this string?";
 	std::cout << "String to check for 'this': " << contString << "\n";
 	if (StringMethods::contains(contString, "this")) {
-		std::cout << "The string contains the word 'this'\n\n";;
+		std::cout << "The string contains the word 'this'\n";;
+	}
+	if (StringMethods::contains(contString, 'h')) {
+		std::cout << "The string contains the char 'h'\n\n";;
+	}
+
+	// testing isEqual method:
+	std::cout << "EQUAL METHOD\n-------------\n";
+	std::string comp1 = "equal";
+	std::string comp2 = "equal";
+	std::string comp3 = "not";
+	if (StringMethods::isEqual(comp1, comp2)) {
+		std::cout << "'" << comp1 << "' is the same as '" << comp2 << "'\n";
+	}
+	if (!(StringMethods::isEqual(comp1, comp3))) {
+		std::cout << "'" << comp1 << "' is not the same as '" << comp3 << "'\n\n";
 	}
 
 	system("PAUSE");

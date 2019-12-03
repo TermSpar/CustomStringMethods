@@ -210,5 +210,37 @@ bool StringMethods::contains(std::string str, std::string check) {
 	return false;
 }
 
+// check if a string contains a char:
+bool StringMethods::contains(std::string str, char check) {
+	for (int i = 0; i < str.length(); i++) {
+		if (str.at(i) == check) {
+			return true;
+		}
+	}
+	return false;
+}
+
+/********** isEqual **********/
+
+// check if two strings are equal (have the same sequence of chars):
+bool StringMethods::isEqual(std::string str1, std::string str2) {
+	// if the strings are the same size:
+	if (str1.length() == str2.length()) {
+		for (int i = 0; i < str1.length(); i++) {
+			// if a character is not the same:
+			if (!(str1.at(i) == str2.at(i))) {
+				return false;
+			}
+			else {
+				// if you get to the last char:
+				if (i == (str1.length() - 1)) {
+					return true;
+				}
+			}
+		}
+	}
+	return false;
+}
+
 StringMethods::~StringMethods() {
 }

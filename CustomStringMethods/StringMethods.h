@@ -31,6 +31,8 @@ public:
 
 	// boolean methods:
 	static bool contains(std::string str, std::string check);
+	static bool contains(std::string str, char check);
+	static bool isEqual(std::string str1, std::string str2);
 
 	~StringMethods();
 };
