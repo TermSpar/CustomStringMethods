@@ -1,7 +1,2 @@
 ﻿  Main.cpp
-  StringMethods.cpp
-c:\users\ben\source\repos\customstringmethods\customstringmethods\stringmethods.cpp(11): warning C4018: '<': signed/unsigned mismatch
-c:\users\ben\source\repos\customstringmethods\customstringmethods\stringmethods.cpp(30): warning C4018: '<': signed/unsigned mismatch
-c:\users\ben\source\repos\customstringmethods\customstringmethods\stringmethods.cpp(49): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
   CustomStringMethods.vcxproj -> C:\Users\Ben\source\repos\CustomStringMethods\Debug\CustomStringMethods.exe

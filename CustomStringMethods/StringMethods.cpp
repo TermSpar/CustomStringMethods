@@ -168,5 +168,47 @@ std::vector<std::string> StringMethods::split(std::string str, char breakOn) {
 	return sVec;
 }
 
+/********** concat **********/
+
+// combine two strings:
+std::string StringMethods::concat(std::string str1, std::string str2) {
+	std::string retString;
+	retString = str1 + str2;
+	return retString;
+}
+
+/********** contains **********/
+
+// check if one string contains another:
+bool StringMethods::contains(std::string str, std::string check) {
+	for (int i = 0; i < str.length(); i++) {
+		// if current char in str is equal to the first char in check:
+		if (str.at(i) == check.at(0)) {
+			// see if the rest of the characters match:
+			int tempCount = i;
+			for (int j = 0; j < check.length(); j++) {
+				// if the current str letter does not match check's letter:
+				if (!(str.at(tempCount) == check.at(j))) {
+					// exit the inner loop:
+					goto breakOut;
+				}
+				// otherwise:
+				else {
+					// if you get to the last letter:
+					if (j == (check.length() - 1)) {
+						// then the word is there:
+						return true;
+					}
+				}
+				tempCount++;
+			}
+		}
+	breakOut:
+		std::cout << "";
+	}
+	// otherwise, the word is not there:
+	return false;
+}
+
 StringMethods::~StringMethods() {
 }

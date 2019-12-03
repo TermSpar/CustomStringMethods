@@ -25,8 +25,12 @@ public:
 	static std::string toString(int);
 	static int toInt(std::string);
 
-	// split method:
+	// modifier methods:
 	static std::vector<std::string> split(std::string, char);
+	static std::string concat(std::string, std::string);
+
+	// boolean methods:
+	static bool contains(std::string str, std::string check);
 
 	~StringMethods();
 };
