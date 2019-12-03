@@ -10,7 +10,7 @@
 // difference between actual numbers and their ASCII values:
 #define ASCII_NUM_CONSTANT 48
 // difference between upper and lowercase letters:
-#define ASCII_CHAR_CONSTANT 32
+#define ASCII_LETTER_CONSTANT 32
 
 class StringMethods {
 public:

@@ -3,6 +3,8 @@
 StringMethods::StringMethods() {
 }
 
+/********** toUpper **********/
+
 // convert string to uppercase:
 std::string StringMethods::toUpper(std::string str) {
 	std::string retString = "";
@@ -10,7 +12,7 @@ std::string StringMethods::toUpper(std::string str) {
 		// if the letter is lowercase:
 		if (str.at(i) >= 97 && str.at(i) <= 122) {
 			// make it uppercase:
-			retString += (str.at(i) - ASCII_CHAR_CONSTANT);
+			retString += (str.at(i) - ASCII_LETTER_CONSTANT);
 		}
 		else {
 			// otherwise just leave it:
@@ -20,6 +22,8 @@ std::string StringMethods::toUpper(std::string str) {
 	return retString;
 }
 
+/********** toLower **********/
+
 // convert string to lowercase:
 std::string StringMethods::toLower(std::string str) {
 	std::string retString = "";
@@ -27,7 +31,7 @@ std::string StringMethods::toLower(std::string str) {
 		// if the letter is uppercase:
 		if (str.at(i) >= 65 && str.at(i) <= 90) {
 			// make it lowercase:
-			retString += (str.at(i) + ASCII_CHAR_CONSTANT);
+			retString += (str.at(i) + ASCII_LETTER_CONSTANT);
 		}
 		else {
 			// otherwise just leave it:
@@ -36,6 +40,8 @@ std::string StringMethods::toLower(std::string str) {
 	}
 	return retString;
 }
+
+/********** toCamel **********/
 
 // convert string to camelcase:
 std::string StringMethods::toCamel(std::string str) {
@@ -50,7 +56,7 @@ std::string StringMethods::toCamel(std::string str) {
 			}
 			else {
 				// otherwise make it lowercase:
-				retString += (str.at(i) + ASCII_CHAR_CONSTANT);
+				retString += (str.at(i) + ASCII_LETTER_CONSTANT);
 			}
 		}
 		// if the char is lowercase
@@ -58,7 +64,7 @@ std::string StringMethods::toCamel(std::string str) {
 			// if it's first or right after a space:
 			if (i == 0 || str.at(i - 1) == ' ') {
 				// make it uppercase:
-				retString += (str.at(i) - ASCII_CHAR_CONSTANT);
+				retString += (str.at(i) - ASCII_LETTER_CONSTANT);
 			}
 			else {
 				// otherwise leave it:
@@ -72,6 +78,8 @@ std::string StringMethods::toCamel(std::string str) {
 	}
 	return retString;
 }
+
+/********** toString **********/
 
 // convert integer to string:
 std::string StringMethods::toString(int num) {
@@ -100,6 +108,8 @@ std::string StringMethods::toString(int num) {
 	return finalString;
 }
 
+/********** toInt **********/
+
 // convert string to integer:
 int StringMethods::toInt(std::string str) {
 	std::vector<int> intVec;
@@ -127,7 +137,9 @@ int StringMethods::toInt(std::string str) {
 	return finalInt;
 }
 
-// split a string:
+/********** split **********/
+
+// split a string on a certain char:
 std::vector<std::string> StringMethods::split(std::string str, char breakOn) {
 	std::vector<std::string> sVec;
 	std::string statement = "";
